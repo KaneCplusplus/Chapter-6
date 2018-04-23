@@ -1,5 +1,5 @@
-//Program: RandomNumberGame2.0
-//Date: 04/19/18
+//NumberGameWithSwitchStatements
+//Date: 04/23/18
 //Author: Kane Greenwalt
 
 #include <iostream>
@@ -100,7 +100,7 @@ int Extream(void)
 	int NumChoice;
 	int secret;
 	int count = 1;
-	
+
 
 	do{
 		srand(time(NULL));
@@ -127,37 +127,25 @@ int Extream(void)
 }
 int main()
 {
-	std::string UserChoice;
-	
+	int Mode;
+
 	std::cout << "Please choose your difficulty \nEasy\nMedium\nHard\nExtream " << std::endl;
-	
-	if (UserChoice == "Easy")
+	std::cin >> Mode;
+	switch (Mode)
 	{
-		for (int n = 5; n > 0; n--)
-		{
-			Easy();
-
-		}
-	}
-	if (UserChoice == "Medium")
-	{
-		for (int n = 5; n > 0; n--)
-		{
-			Med();
-
-		}
-	}
-	if (UserChoice == "Hard")
-	{
-		for (int n = 5; n > 0; n--)
-		{
-			Hard();
-
-		}
-	}
-	if (UserChoice == "Extream")
-	{
+	case 1:
+		Easy();
+		break;
+	case 2:
+		Med();
+		break;
+	case 3:
+		Hard();
+		break;
+	case 4:
 		Extream();
+		break;
 	}
-
+		
+	system("Pause");
 }
