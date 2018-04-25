@@ -130,6 +130,7 @@ int main()
 	std::string UserChoice;
 	
 	std::cout << "Please choose your difficulty \nEasy\nMedium\nHard\nExtream " << std::endl;
+	std::cin >> UserChoice;
 	
 	if (UserChoice == "Easy")
 	{
